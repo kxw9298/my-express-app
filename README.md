@@ -7,3 +7,12 @@
 `docker exec -it [container_id] bash`
 
 `docker stop my-app && docker rm my-app`
+
+```
+kubectl create secret generic tls-certs --from-file tls/
+kubectl create configmap nginx-proxy-conf --from-file nginx/proxy.conf
+```
+
+```
+kubectl get pods -l "app=monolith,secure=enabled"
+```
